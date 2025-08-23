@@ -1,0 +1,9 @@
+services:
+  script:
+    build:
+      context: .
+      dockerfile: Dockerfile.compose_practice
+    depends_on:
+      - redis
+  redis:
+    image: redis:alpine

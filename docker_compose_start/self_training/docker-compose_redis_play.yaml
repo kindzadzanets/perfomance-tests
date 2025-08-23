@@ -1,0 +1,10 @@
+services:
+  name_gen:
+    build: 
+      context: .
+      dockerfile: Dockerfile.play_redis
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
