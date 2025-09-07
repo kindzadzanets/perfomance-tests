@@ -14,7 +14,7 @@ with httpx.Client(base_url="http://localhost:8003", timeout=10) as c:
     created_user_response.raise_for_status()
     created_user_response_data = created_user_response.json()
 
-    print(created_user_response.status_code)
+    # print(created_user_response.status_code)
 
     open_deposit_account_body = {"userId": created_user_response_data["user"]["id"]}
     open_deposit_account_response = c.post(
